@@ -19,35 +19,35 @@ void draw()
   }
 }
 
-  class Particle
-  {
-    double myX, myY, myAngle, mySpeed;
-    int myColor;
-    Particle()
-    {
-      myX = myY = 200;
-      myAngle = Math.random()*2*Math.PI;
-      mySpeed = Math.random()*10;
-      myColor = color(255, (int)(Math.random()*69+146), 0, (int)(Math.random()*255));
-    }
-    void move()
-    {
-      myX = myX + Math.cos(myAngle)*mySpeed;
-      myY = myY + Math.sin(myAngle)*mySpeed;
-    }
-    void show()
-    {
-      noStroke();
-      fill(myColor);
+class Particle
+{
+   double myX, myY, myAngle, mySpeed;
+   int myColor;
+   Particle()
+   {
+     myX = myY = 200;
+     myAngle = Math.random()*2*Math.PI;
+     mySpeed = Math.random()*10;
+     myColor = color(255, (int)(Math.random()*69+146), 0, (int)(Math.random()*255));
+   }
+   void move()
+   {
+     myX = myX + Math.cos(myAngle)*mySpeed;
+     myY = myY + Math.sin(myAngle)*mySpeed;
+   }
+   void show()
+   {
+     noStroke();
+     fill(myColor);
      float rot = random(PI*2);
-      translate((float)myX, (float)myY);
-      rotate(rot);
-      for (float i = 0; i < PI * 2; i+= PI*2/4){     
-        rotate(i);
-        translate(6, 0);
-        ellipse(0, 0, 10, 10);
-        translate(-6, 0);
-        rotate(-i);
+     translate((float)myX, (float)myY);
+     rotate(rot);
+     for (float i = 0; i < PI * 2; i+= PI*2/4){     
+       rotate(i);
+       translate(6, 0);
+       ellipse(0, 0, 10, 10);
+       translate(-6, 0);
+       rotate(-i);
       }
       rotate(-rot);
       translate((float)-myX, (float)-myY );
