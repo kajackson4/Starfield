@@ -50,7 +50,7 @@ class Particle
        rotate(-i);
       }
       rotate(-rot);
-      translate((float)-myX, (float)-myY );
+      translate((float)(-myX), (float)(-myY));
     }
     }
 
